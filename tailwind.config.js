@@ -11,6 +11,15 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        rotate: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(90deg)" },
+        },
+      },
+      animation: {
+        rotate: "rotate 1.4s ease-in-out",
+      },
     },
   },
   plugins: [],
