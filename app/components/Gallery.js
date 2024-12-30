@@ -1,18 +1,12 @@
-"use client";
-
-import { useState } from "react";
 import TypoH2 from "./ui/TypoH2";
 import Image from "next/image";
 
 const images = Array.from({ length: 44 }).map((_, index) => ({
-  src: `/gallery_images/עומר_תעשיות_עץ_גלרייה (${index + 3}).png`,
+  src: `/gallery_images/עומר_תעשיות_עץ_גלרייה (${index + 1}).png`,
   alt: "עומר תעשיות עץ",
 }));
 
 export default function Gallery() {
-  const [showMore, setShowMore] = useState(false);
-  const [imagesToShow, setImagesToShow] = useState(10);
-
   return (
     <section
       id="gallery"
@@ -22,7 +16,7 @@ export default function Gallery() {
         <TypoH2>עבודות שעשינו</TypoH2>
       </div>
       <div className="list-gallery">
-        {images.slice(0, imagesToShow).map((image, index) => (
+        {images.map((image, index) => (
           <Image
             key={index}
             src={image.src}
@@ -34,14 +28,6 @@ export default function Gallery() {
             className="rounded object-cover mb-10 sm:mr-10"
           />
         ))}
-        {images.length > 10 && (
-          <button
-            onClick={() => setImagesToShow(imagesToShow + 10)}
-            className="w-full py-3 px-6 bg-foreground text-background rounded-lg hover:opacity-90 transition-opacity"
-          >
-            טען עוד תמונות
-          </button>
-        )}
       </div>
     </section>
   );

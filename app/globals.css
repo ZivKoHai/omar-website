@@ -39,6 +39,13 @@ body {
   scroll-behavior: smooth;
 }
 
+.main-wrapper-omar {
+  --width: 1500px;
+  --padding: 20px;
+  width: min(var(--width), 100% - var(--padding));
+  margin-inline: auto;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -79,6 +86,12 @@ dialog::backdrop {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .embla__slide {
+    flex: 0 0 100%;
+  }
 }
 
 .embla__slide img {

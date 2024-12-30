@@ -1,6 +1,5 @@
 import Image from "next/image";
 import TypoH2 from "./ui/TypoH2";
-import ButtonModal from "./ui/ButtonModal";
 
 export default function Services() {
   const services = [
@@ -27,11 +26,17 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="px-10 my-10 sm:px-20 min-h-[500px]">
+    <section
+      id="services"
+      className="main-wrapper-omar px-10 my-10 sm:px-20 min-h-[500px]"
+    >
       <TypoH2>שירותים</TypoH2>
       <div className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-2 grid-rows-4 gap-10 mt-10">
         {services.map((service) => (
-          <div className="rounded-lg min-h-[400px] relative" key={service.name}>
+          <div
+            className="rounded-lg min-h-[400px] relative hover:scale-105 transition-all duration-300"
+            key={service.name}
+          >
             <Image
               src={`/${service.src}`}
               alt={service.alt}

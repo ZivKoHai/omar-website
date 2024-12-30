@@ -23,7 +23,10 @@ export default function WhyUs() {
   ];
 
   return (
-    <section id="whyus" className="px-20 py-10 flex flex-col gap-10">
+    <section
+      id="whyus"
+      className="main-wrapper-omar   px-20 py-10 flex flex-col gap-10"
+    >
       <TypoH2>למה שווה לכם לעשות ריהוט איתנו?</TypoH2>
       <div className="flex flex-row gap-10 justify-evenly items-baseline flex-wrap">
         {whyUsContext.map((item, index) => (

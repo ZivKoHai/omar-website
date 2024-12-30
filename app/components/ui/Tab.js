@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import BtnArrow from "./btnArrow";
+import EmblaCarousel from "../emblaCarousel";
 
 export default function Tab() {
   const [activeTab, setActiveTab] = useState(0);
@@ -82,15 +83,20 @@ export default function Tab() {
   ];
 
   return (
-    <div className="flex flex-col justify-start items-start gap-10 mt-10">
-      <div className="flex flex-row justify-around">
-        <ol className="flex flex-row gap-10 text-xl">
+    <div className="flex flex-col sm:flex-row justify-start items-start gap-10 mt-10">
+      <div className="sm:basis-1/3 w-full flex flex-row justify-around">
+        <ol className="flex flex-col  gap-10 text-xl w-full">
           {tabs.map((tab) => (
-            <li key={tab.id}>
+            <li
+              key={tab.id}
+              className={`w-full rounded-lg px-4 sm:py-4 py-2 ${
+                activeTab === tab.id ? "bg-foreground text-background" : ""
+              }`}
+            >
               <button
                 className={`hover:cursor-pointer ${
                   activeTab === tab.id
-                    ? "text-orange-500 underline underline-offset-4 underline-orange-500 transition-all duration-300"
+                    ? "underline underline-offset-4 underline-background"
                     : ""
                 }`}
                 onClick={() => {
@@ -115,29 +121,19 @@ export default function Tab() {
         aria-label={tabs[activeTab].name}
         aria-labelledby="tab-images"
       >
-        <button
-          className="absolute top-1/2 -translate-y-1/2 left-5 z-10"
-          onClick={handleLeftArrowClick}
-          aria-label="previous image"
-        >
-          <BtnArrow direction="left" />
-        </button>
-        <button
-          className="absolute top-1/2 -translate-y-1/2 right-5 z-10"
-          onClick={handleRightArrowClick}
-          aria-label="next image"
-        >
-          <BtnArrow direction="right" />
-        </button>
-
-        <Image
-          key={imageActive}
-          src={`${tabs[activeTab].images[imageActive]}`}
-          alt={tabs[activeTab].name}
-          fill
-          className="object-contain rounded-lg brightness-50"
-          aria-label={tabs[activeTab].name}
-        />
+        <EmblaCarousel>
+          {tabs[activeTab].images.map((image, index) => (
+            <div key={index} className="embla__slide relative aspect-square">
+              <Image
+                src={image}
+                alt={tabs[activeTab].name}
+                fill
+                className="object-contain rounded-lg brightness-50"
+                aria-label={tabs[activeTab].name}
+              />
+            </div>
+          ))}
+        </EmblaCarousel>
       </div>
     </div>
   );

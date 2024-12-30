@@ -1,7 +1,6 @@
-import Nav from "./components/nav";
+import NavBar from "./components/nav-bar";
 import "./globals.css";
 import { Heebo } from "next/font/google";
-import Script from "next/script";
 
 const heebo = Heebo({
   subsets: ["latin"],
@@ -10,7 +9,12 @@ const heebo = Heebo({
 
 export const metadata = {
   title: "עומר תעשיות עץ",
+  openGraph: {
+    images: "/omar-favicon-light.svg",
+  },
   description: "עבודות עץ | שייש וקרמיקה | עיצוב מטבחים | עיצוב חדרים",
+  keywords:
+    "עבודות עץ, שייש וקרמיקה, עיצוב מטבחים, עיצוב חדרים, עבודות עץ בכלל, עבודות עץ בפרוייקט, עבודות עץ מותאמות אישית, עבודות עץ בכל סוג, עבודות עץ בכל סוג, עבודות עץ בכל סוג, עבודות עץ בכל סוג",
 };
 
 export default function RootLayout({ children }) {
@@ -20,7 +24,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/omar-favicon-light.svg" />
       </head>
       <body className={`${heebo.className} antialiased`}>
-        <Nav />
+        <NavBar />
         {children}
       </body>
     </html>

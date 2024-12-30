@@ -1,3 +1,4 @@
+import Button from "./ui/Button";
 import TypoH2 from "./ui/TypoH2";
 import TypoP from "./ui/TypoP";
 
@@ -10,6 +11,9 @@ export default function Contact() {
       <div className="flex flex-col gap-10 bg-foreground text-background p-10 rounded-lg">
         <TypoH2>צור קשר</TypoH2>
         <TypoP>כל שאלה או דעתכם מועסקת בחום ובהצלחה. נשמח לשמוע ממכם.</TypoP>
+        <Button href="https://wa.me/972545829617" variant="secondary">
+          צור קשר
+        </Button>
       </div>
     </section>
   );

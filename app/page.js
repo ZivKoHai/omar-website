@@ -10,6 +10,8 @@ import Footer from "./components/Footer.js";
 import Gallery from "./components/Gallery.js";
 import LenisScroll from "./components/LenisScroll.js";
 import LoadingScreen from "./components/LoadingScreen.js";
+import FAQ from "./components/FAQ.js";
+
 export default function Home() {
   return (
     <>
@@ -21,9 +23,8 @@ export default function Home() {
       <Works />
       <About />
       <WhyUs />
-      <div className="flex justify-center">
-        <Testimonials />
-      </div>
+      <Testimonials />
+      <FAQ />
       <Gallery />
       <Contact />
       <Footer />
