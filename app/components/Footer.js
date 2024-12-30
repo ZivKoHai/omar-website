@@ -24,15 +24,11 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "פייסבוק",
-      href: "https://www.facebook.com/profile.php?id=100090111111111",
+      href: "https://www.facebook.com/profile.php?id=61571118939552",
     },
     {
       name: "אינסטגרם",
-      href: "https://www.instagram.com/profile.php?id=100090111111111",
-    },
-    {
-      name: "טוויטר",
-      href: "https://www.twitter.com/profile.php?id=100090111111111",
+      href: "https://www.instagram.com/omarwoodshop/",
     },
   ];
 
