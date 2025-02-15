@@ -5,7 +5,7 @@ export default function Works() {
   return (
     <section
       id="works"
-      className="main-wrapper-omar px-10 my-14 sm:px-20 min-h-[500px] "
+      className="main-wrapper-omar px-4 my-14  min-h-[500px] "
     >
       <TypoH2>העבודות שלנו</TypoH2>
       <div>

@@ -35,16 +35,19 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="main-wrapper-omar px-10 my-10 sm:px-20 min-h-[500px] flex flex-col gap-10"
+      className="main-wrapper-omar px-4 my-10 sm:px-8 min-h-[500px] flex flex-col items-center gap-10"
     >
       <TypoH2>שאלות ותשובות</TypoH2>
       <div
-        className="flex flex-col gap-4 w-full sm:w-[70%] justify-start"
+        className="flex flex-col gap-4 w-full  justify-center max-w-2xl mx-auto"
         dir="rtl"
       >
         {questionsAndAnswers.map((item, index) => {
           return (
-            <details key={index} className=" pb-3 hover:cursor-pointer">
+            <details
+              key={index}
+              className="pb-3 hover:cursor-pointer border-b border-gray-200"
+            >
               <summary className="text-right">{item.q}</summary>
               <p className="py-4">{item.a}</p>
             </details>

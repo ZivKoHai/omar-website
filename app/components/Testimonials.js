@@ -61,28 +61,31 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="main-wrapper-omar min-h-[500px] w-full relative sm:px-20 px-10 py-20 flex flex-col gap-10 overflow-hidden"
+      className="main-wrapper-omar min-h-[500px] w-full relative px-4 py-20 flex flex-col gap-10 overflow-hidden"
     >
-      <TypoH2>מה אומרים עלינו</TypoH2>
-      <EmblaCarousel>
-        {testimonialsContext.map((item, index) => (
-          <div key={index} className="embla__slide">
-            <div className="relative aspect-square w-[300px]  rounded-lg">
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className="object-cover rounded-lg brightness-75"
-              />
-            </div>
-            <div className="flex flex-col gap-5">
-              <Quote />
-              <TypoH3>{item.name}</TypoH3>
-              <TypoP>{item.description}</TypoP>
-            </div>
+      <div className="flex flex-col md:flex-row gap-8 items-end">
+        {/* Right side - Testimonial */}
+        <div className="w-full md:w-1/2 flex flex-col gap-6">
+          <div className="text-right space-y-4">
+            <Quote className="text-2xl mb-4"></Quote>
+            <TypoH3 className="mt-4">{testimonialsContext[0].name}</TypoH3>
+            <TypoP className="text-gray-600">
+              תודה רבה על הכל, אתם עובדים עם כל הלב והנשמה, סופר מקצוענים
+              והתוצאה נראית לעין. יצא מטורףף באמת.
+            </TypoP>
           </div>
-        ))}
-      </EmblaCarousel>
+        </div>
+        <div className="w-full md:basis-1/2 relative h-[300px] md:h-[400px]">
+          <Image
+            src="/עומר_תעשיות_עץ_תמונה_שירותים_1.png"
+            alt="testimonial"
+            fill
+            className="w-full h-full object-cover rounded-lg"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+      </div>
     </section>
   );
 }

@@ -12,7 +12,7 @@ export default function Gallery() {
       id="gallery"
       className="px-10 my-10 sm:px-20 min-h-fit py-10 flex flex-col gap-10"
     >
-      <div>
+      <div className="mx-auto">
         <TypoH2>עבודות שעשינו</TypoH2>
       </div>
       <div className="list-gallery">
@@ -25,7 +25,7 @@ export default function Gallery() {
             width={300}
             height={300}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="rounded object-cover mb-10 sm:mr-10"
+            className="rounded object-cover mb-10 sm:mr-10 w-auto h-auto"
           />
         ))}
       </div>

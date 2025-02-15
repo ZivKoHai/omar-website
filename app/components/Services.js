@@ -28,7 +28,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="main-wrapper-omar px-10 my-10 sm:px-20 min-h-[500px]"
+      className="main-wrapper-omar px-4 my-10  min-h-[500px]"
     >
       <TypoH2>שירותים</TypoH2>
       <div className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-2 grid-rows-4 gap-10 mt-10">

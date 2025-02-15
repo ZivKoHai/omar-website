@@ -21,14 +21,14 @@
     0.9976 70.09%,
     1
   );
-  --background: #ffffff;
+  --background: #faf8f6;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #fafafa;
+    --foreground: #faf8f6;
   }
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .main-wrapper-omar {
-  --width: 1500px;
+  --width: 1280px;
   --padding: 20px;
   width: min(var(--width), 100% - var(--padding));
   margin-inline: auto;

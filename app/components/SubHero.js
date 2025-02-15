@@ -7,7 +7,7 @@ export default function SubHero() {
   return (
     <section
       id="subhero"
-      className="main-wrapper-omar grid md:grid-cols-2 grid-rows-1 auto-rows-auto min-h-[500px] mt-10 px-10 sm:px-20 gap-10"
+      className="main-wrapper-omar grid md:grid-cols-2 grid-rows-1 auto-rows-auto min-h-[500px] mt-10 px-4 sm:px-8 gap-10"
     >
       <div className="flex flex-col justify-center items-center gap-10">
         <TypoH1>עבודות עץ מותאמות אישית לבית שלכם</TypoH1>
