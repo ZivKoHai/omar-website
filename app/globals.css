@@ -36,7 +36,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-heebo);
-  scroll-behavior: smooth;
 }
 
 .main-wrapper-omar {

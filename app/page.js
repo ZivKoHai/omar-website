@@ -23,7 +23,6 @@ export const metadata = {
 
   author: 'עומר תעשיות עץ בע"מ',
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1",
   icons: {
     icon: "/omar-favicon-dark.svg",
     apple: "/omar-favicon-dark.svg",
@@ -55,16 +54,6 @@ export const metadata = {
     description:
       "רהיטים בעיצוב אישי, פתרונות נגרות, ועבודות עץ איכותיות לכל פרויקט.",
     images: ["/og-image.png"],
-  },
-
-  alternates: {
-    canonical: "https://omarwoodshop.co.il/",
-  },
-
-  other: {
-    "theme-color": "#000",
-    "msapplication-TileColor": "#fafafa",
-    "msapplication-TileImage": "/og-image.png",
   },
 };
 

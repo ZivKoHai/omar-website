@@ -9,8 +9,10 @@ const tabs = [
     id: 0,
     name: "חדר שינה",
     heading: "חדר שינה",
-    description: "חדר שינה מעוצב אישית על ידי מעצבים ומטפלים בעציים",
+    description:
+      "חדרי שינה מעוצבים בהתאמה אישית, בשילוב חומרי גלם איכותיים ותכנון חכם היוצר אווירה מושלמת לנוחות ורוגע.",
     images: [
+      "/tabs-bedroom.jpg",
       "/gallery_images/עומר_תעשיות_עץ_גלרייה (3).png",
       "/gallery_images/עומר_תעשיות_עץ_גלרייה (4).png",
       "/gallery_images/עומר_תעשיות_עץ_גלרייה (5).png",
@@ -26,8 +28,10 @@ const tabs = [
     id: 1,
     name: "ריהוט",
     heading: "ריהוט",
-    description: "ריהוט מעוצב אישית על ידי מעצבים ומטפלים בעציים",
+    description:
+      "ריהוט עץ בעיצוב אישי, המשלב פונקציונליות, אסתטיקה ואיכות בלתי מתפשרת – לכל חלל ולכל סגנון עיצובי.",
     images: [
+      "/tabs-decoration.jpg",
       "/gallery_images/עומר_תעשיות_עץ_גלרייה (1).png",
       "/gallery_images/עומר_תעשיות_עץ_גלרייה (2).png",
       "/gallery_images/עומר_תעשיות_עץ_גלרייה (6).png",
@@ -47,8 +51,10 @@ const tabs = [
     id: 2,
     name: "מטבח",
     heading: "מטבח",
-    description: "מטבח מעוצב אישית על ידי מעצבים ומטפלים בעציים",
+    description:
+      "מטבחים מעוצבים בהתאמה אישית, עם פתרונות אחסון חכמים, חומרי גלם איכותיים, ועיצוב מרהיב שמתאים לכל בית.",
     images: [
+      "/עומר_תעשיות_עץ_תמונה_שירותים_1.png",
       "/gallery_images/עומר_תעשיות_עץ_גלרייה (1).png",
       "/gallery_images/עומר_תעשיות_עץ_גלרייה (2).png",
       "/gallery_images/עומר_תעשיות_עץ_גלרייה (6).png",
@@ -74,7 +80,6 @@ export default function Tab() {
     const interval = setInterval(() => {
       setActiveTab((prevTab) => (prevTab >= 2 ? 0 : prevTab + 1));
     }, 5000);
-    console.log(activeTab);
 
     return () => clearInterval(interval);
   }, [isAutoRotating]);
@@ -106,7 +111,7 @@ export default function Tab() {
             >
               <div className="h-[2px] bg-stone-400 w-full overflow-hidden">
                 <div
-                  className="h-full bg-orange-500"
+                  className="h-full bg-foreground"
                   style={{
                     width: tab.id === activeTab ? "100%" : "0%",
                     transition:
@@ -122,7 +127,19 @@ export default function Tab() {
           ))}
         </div>
 
-        <div className="mt-8 relative">
+        <div className="mt-8">
+          <Image
+            src={tabs[activeTab].images[0]}
+            alt={tabs[activeTab].name}
+            height={1000}
+            width={1000}
+            quality={100}
+            className="object-cover rounded-lg aspect-[16/8] w-full"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
+          />
+        </div>
+
+        {/* <div className="mt-8 relative">
           <EmblaCarousel>
             {tabs[activeTab].images.map((image, index) => (
               <div key={index} className="embla__slide relative aspect-square">
@@ -136,7 +153,7 @@ export default function Tab() {
               </div>
             ))}
           </EmblaCarousel>
-        </div>
+        </div> */}
       </div>
     </section>
   );
