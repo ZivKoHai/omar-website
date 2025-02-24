@@ -3,6 +3,7 @@ export default function Button({
   href,
   className,
   variant = "primary",
+  id,
 }) {
   const baseStyles =
     "px-4 py-2 rounded-md hover:translate-y-1 transition-all duration-300 w-full text-center";
@@ -15,6 +16,7 @@ export default function Button({
     <a
       href={href}
       className={`${baseStyles} ${variantStyles[variant]} ${className}`}
+      id={id}
     >
       {children}
     </a>

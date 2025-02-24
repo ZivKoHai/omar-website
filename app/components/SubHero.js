@@ -16,7 +16,11 @@ export default function SubHero() {
           בין אם אתם מחפשים שירותי עבודות עץ בכלל או פרוייקט מסוים, אנו מציעים
           פתרונות מקצועיים ומותאמים אישית לכל דרישותיכם.
         </TypoP>
-        <Button href="https://wa.me/972545829617" className="bg-foreground">
+        <Button
+          id="subhero-button"
+          href="https://wa.me/972545829617"
+          className="bg-foreground"
+        >
           צור קשר
         </Button>
       </div>
