@@ -99,9 +99,37 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl">
       <head>
-        <link rel="icon" href="/omar-favicon-light.svg" />
+        {/* Google Tag Manager - Head */}
+        <Script id="gtm-head" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KHBXPGK9');
+          `}
+        </Script>
+        {/* favicon */}
+        <link
+          rel="icon"
+          href="/omar-favicon-light.svg"
+          type="image/svg+xml"
+          sizes="any"
+        />
       </head>
       <body className={`${heebo.className} antialiased`}>
+        {/* Google Tag Manager - Body (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KHBXPGK9"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
+        {/* ************** */}
+        {/* Google Ads Tracking */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16871461530"
           strategy="afterInteractive"
