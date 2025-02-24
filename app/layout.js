@@ -99,6 +99,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl">
       <head>
+        {/* google analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KT5GS8D46R"
+        ></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KT5GS8D46R');
+            `}
+        </Script>
         {/* Google Tag Manager - Head */}
         <Script id="gtm-head" strategy="afterInteractive">
           {`
